@@ -1,3 +1,14 @@
-.header {
-    --ion-color-background: #ffffff;
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.background-container {
+  background-image: url('../../assets/img/fondopantalla.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100%;
 }

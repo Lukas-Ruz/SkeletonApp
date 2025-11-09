@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-biblioteca',
   templateUrl: './biblioteca.page.html',
   styleUrls: ['./biblioteca.page.scss'],
+  standalone: false,
 })
 export class BibliotecaPage implements OnInit {
 

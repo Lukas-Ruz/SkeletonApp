@@ -1,5 +1,25 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title> Iniciar sesion </ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="Light">
+    <ion-title class="ion-text-center"> Iniciar sesion </ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <div class="center-container background-container">
+    <ion-card >
+      <ion-card-content>
+        <ion-list>
+          <ion-label position="floating" color="dark">Correo Electrónico</ion-label>
+          <ion-item>
+            <ion-input type="email" placeholder="ejemplo@gmail.com"></ion-input>
+          </ion-item>
+          <ion-label position="floating" color="dark">Contraseña</ion-label>
+          <ion-item>
+            <ion-input type="password" placeholder="Ingresa tu contraseña"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
