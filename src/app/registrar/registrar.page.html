@@ -4,10 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">registrar</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom" color="light">
+    <ion-tab-button (click)="navDemo()" tab="demo">
+      <ion-icon name="musical-notes-outline"></ion-icon>
+      Demo
+    </ion-tab-button>
+    <ion-tab-button (click)="navBiblioteca()" tab="biblioteca">
+      <ion-icon name="library-outline"></ion-icon>
+      Biblioteca
+    </ion-tab-button>
+    <ion-tab-button (click)="navRegistrar()" tab="registrar">
+      <ion-icon name="document-text-outline"></ion-icon>
+      Registrar
+    </ion-tab-button>
+    <ion-tab-button (click)="navBuscar()" tab="buscar">
+      <ion-icon name="search"></ion-icon>
+      Buscar
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

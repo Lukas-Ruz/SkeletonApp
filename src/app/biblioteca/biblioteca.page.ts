@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-biblioteca',
@@ -6,11 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./biblioteca.page.scss'],
   standalone: false,
 })
-export class BibliotecaPage implements OnInit {
+export class BibliotecaPage {
 
-  constructor() { }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
+  // Método para navegar a Demo
+  navDemo() {
+    this.router.navigate(['/demo']);
+  }
+  // Método para navegar a Biblioteca
+  navBiblioteca() {
+    this.router.navigate(['/biblioteca']);
+  }
+  // Método para navegar a Registrar
+  navRegistrar() {
+    this.router.navigate(['/registrar']);
+  }
+  // Método para navegar a Buscar
+  navBuscar() {
+    this.router.navigate(['/buscar']);
   }
 
 }
