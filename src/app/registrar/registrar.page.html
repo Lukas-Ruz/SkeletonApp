@@ -1,26 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>registrar</ion-title>
+    <ion-title>Registra tu Banda!</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom" color="light">
-    <ion-tab-button (click)="navDemo()" tab="demo">
-      <ion-icon name="musical-notes-outline"></ion-icon>
-      Demo
-    </ion-tab-button>
-    <ion-tab-button (click)="navBiblioteca()" tab="biblioteca">
-      <ion-icon name="library-outline"></ion-icon>
-      Biblioteca
-    </ion-tab-button>
-    <ion-tab-button (click)="navRegistrar()" tab="registrar">
-      <ion-icon name="document-text-outline"></ion-icon>
+<ion-content [fullscreen]="true" >
+  <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="nombre" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" color="dark">Fecha de Inicio</ion-label>
+      <ion-datetime formControlName="fechaInicio" display-format="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea formControlName="descripcion" rows="3"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Integrantes (separados por comas)</ion-label>
+      <ion-input formControlName="integrantes" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Estilo</ion-label>
+      <ion-input formControlName="estilo" type="text"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!registroForm.valid">
       Registrar
-    </ion-tab-button>
-    <ion-tab-button (click)="navBuscar()" tab="buscar">
-      <ion-icon name="search"></ion-icon>
-      Buscar
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+    </ion-button>
+  </form>
+
+</ion-content>

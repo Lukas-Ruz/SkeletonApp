@@ -1,26 +1,66 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>biblioteca</ion-title>
+    <ion-title>Biblioteca</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-tabs>
-  <ion-tab-bar slot="bottom" color="light">
-    <ion-tab-button (click)="navDemo()" tab="demo">
-      <ion-icon name="musical-notes-outline"></ion-icon>
-      Demo
-    </ion-tab-button>
-    <ion-tab-button (click)="navBiblioteca()" tab="biblioteca">
-      <ion-icon name="library-outline"></ion-icon>
-      Biblioteca
-    </ion-tab-button>
-    <ion-tab-button (click)="navRegistrar()" tab="registrar">
-      <ion-icon name="document-text-outline"></ion-icon>
-      Registrar
-    </ion-tab-button>
-    <ion-tab-button (click)="navBuscar()" tab="buscar">
-      <ion-icon name="search"></ion-icon>
-      Buscar
-    </ion-tab-button>
-  </ion-tab-bar>
-</ion-tabs>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Noticias para Sudamerica!</ion-card-title>
+      <ion-card-subtitle>12/10/25. Ciudad de Mexico, Mexico</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipiscing elit nunc aliquet arcu
+      accumsan, metus porta rhoncus auctor pharetra suscipit pellentesque tempus
+      vehicula nullam sagittis, lacinia velit molestie tortor tempor per orci
+      nulla commodo mattis. Mauris turpis interdum montes morbi lacinia litora
+      a, felis condimentum sollicitudin lobortis orci nibh consequat, sociosqu
+      proin accumsan viverra elementum non. Primis pellentesque arcu dignissim
+      posuere facilisis condimentum aptent per, donec quis taciti senectus
+      aenean tortor at dis lobortis, quam laoreet hendrerit pulvinar volutpat
+      curabitur congue
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img
+      alt="GunsandRoses"
+      src="../../assets/img/guns.jpg"
+    />
+    <ion-card-header>
+      <ion-card-title>Guns and Roses</ion-card-title>
+      <ion-card-subtitle> <a href="">Pagina de la banda </a> </ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Lorem ipsum dolor sit amet consectetur adipiscing elit nunc aliquet arcu
+      accumsan, metus porta rhoncus auctor pharetra suscipit pellentesque tempus
+      vehicula nullam sagittis, lacinia velit molestie tortor tempor per orci
+      nulla commodo mattis. Mauris turpis interdum montes morbi lacinia litora
+      a, felis condimentum sollicitudin lobortis orci nibh consequat, sociosqu
+      proin accumsan viverra elementum non. Primis pellentesque arcu dignissim
+      posuere facilisis condimentum aptent per, donec quis taciti senectus
+      aenean tortor at dis lobortis, quam laoreet hendrerit pulvinar volutpat
+      curabitur congue
+    </ion-card-content>
+  </ion-card>
+
+  <ion-item>
+    <ion-label>
+      <ion-title> Historia del rock</ion-title>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipiscing elit nunc aliquet arcu
+        accumsan, metus porta rhoncus auctor pharetra suscipit pellentesque
+        tempus vehicula nullam sagittis, lacinia velit molestie tortor tempor
+        per orci nulla commodo mattis. Mauris turpis interdum montes morbi
+        lacinia litora a, felis condimentum sollicitudin lobortis orci nibh
+        consequat, sociosqu proin accumsan viverra elementum non. Primis
+        pellentesque arcu dignissim posuere facilisis condimentum aptent per,
+        donec quis taciti senectus aenean tortor at dis lobortis, quam laoreet
+        hendrerit pulvinar volutpat curabitur congue.
+      </p>
+    </ion-label>
+  </ion-item>
+</ion-content>

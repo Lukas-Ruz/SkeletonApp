@@ -35,3 +35,137 @@
 // /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 // /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 // @import "@ionic/angular/css/palettes/dark.system.css";
+
+:root {
+  --rock-black: #000000; 
+  --rock-dark-gray: #2c2c2c;  
+  --rock-red: #ff0000; 
+  --rock-silver: #c0c0c0;  
+  --rock-shadow: rgba(255, 0, 0, 0.5);
+}
+
+ion-header {
+  --background: var(--rock-black);  
+  --color: var(--rock-silver);
+  box-shadow: 0 2px 10px var(--rock-shadow);  
+}
+
+ion-toolbar {
+  --background: var(--rock-black);
+  --color: var(--rock-silver);
+  border-bottom: 2px solid var(--rock-red); 
+}
+
+ion-title {
+  font-family: 'Impact', sans-serif;  
+  font-weight: bold;
+  text-transform: uppercase; 
+  text-shadow: 2px 2px 4px var(--rock-shadow);  
+  letter-spacing: 2px; 
+}
+
+// Estilos para el contenido principal
+ion-content {
+  --background: linear-gradient(135deg, var(--rock-black) 0%, var(--rock-dark-gray) 100%);  
+  --color: var(--rock-silver);  
+  padding: 16px;
+}
+
+// Estilos para las tarjetas (cards)
+ion-card {
+  --background: var(--rock-dark-gray);  
+  --color: var(--rock-silver);
+  border: 2px solid var(--rock-red); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 15px var(--rock-shadow);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease; 
+}
+
+ion-card:hover {
+  transform: scale(1.02); 
+}
+
+ion-card-header {
+  --color: var(--rock-red);  
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px var(--rock-black);
+}
+
+ion-card-title {
+  color: #c0c0c0;
+  font-size: 1.5rem;  
+  letter-spacing: 1px;
+}
+
+ion-card-subtitle {
+  font-size: 1rem;
+  color: var(--rock-silver);
+  text-decoration: underline;
+}
+
+// Estilos para el contenido de las cards
+ion-card-content {
+  --color: var(--rock-silver);
+  line-height: 1.6;  
+  font-family: 'Verdana', sans-serif;
+}
+
+// Estilos para las imágenes en las cards
+ion-card img {
+  width: 100%;  
+  height: auto; 
+  border-radius: 6px; 
+  filter: grayscale(20%) contrast(1.2) brightness(0.9);  
+  box-shadow: 0 2px 8px var(--rock-shadow);
+}
+
+// Estilos para los items
+ion-item {
+  --background: var(--rock-dark-gray); 
+  --color: var(--rock-silver);
+  border: 1px solid var(--rock-red); 
+  border-radius: 6px;
+  box-shadow: 0 2px 10px var(--rock-shadow);
+  margin-bottom: 16px;
+}
+
+ion-label {
+  --color: var(--rock-silver);
+}
+
+ion-title {
+  color: var(--rock-red); 
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px var(--rock-black);
+}
+
+ion-label p {
+  line-height: 1.6;
+  font-family: 'Verdana', sans-serif;
+}
+
+// Enlaces (como el de "Pagina de la banda")
+a {
+  color: var(--rock-red);
+  text-decoration: none; 
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline; 
+  color: var(--rock-silver); 
+}
+
+// Media queries para móviles (Ionic ya es responsive, pero ajustamos para rock)
+@media (max-width: 768px) {
+  ion-card {
+    margin: 8px; 
+  }
+  
+  ion-title {
+    font-size: 1.2rem;
+  }
+}
