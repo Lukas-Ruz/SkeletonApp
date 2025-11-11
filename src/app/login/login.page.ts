@@ -80,7 +80,7 @@ login() {
   }
 
   // Si todas las validaciones son correctas, navega a la página "Demo"
-  this.router.navigate(['/demo'], { state: { user: this.email } });
+  this.router.navigate(['/biblioteca'], { state: { user: this.email } });
 }
 
 }
