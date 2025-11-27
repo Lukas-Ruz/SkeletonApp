@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Animation, AnimationController } from '@ionic/angular';
@@ -9,7 +9,7 @@ import { Animation, AnimationController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
   standalone: false,
 })
-export class LoginPage implements OnInit{
+export class LoginPage{
 
   email: string = '';
   password: string = '';
@@ -17,7 +17,6 @@ export class LoginPage implements OnInit{
 
   constructor(private alertcontroller: AlertController, private router: Router, private animationCtrl: AnimationController ) { }
 
-ngOnInit(): void {}
 
   // Animación
   @ViewChild('guitarra', { read: ElementRef }) guitarra!: ElementRef<HTMLImageElement>;
@@ -26,14 +25,12 @@ ngOnInit(): void {}
     this.animation = this.animationCtrl
       .create()
       .addElement(this.guitarra.nativeElement)
-      .duration(3000)  // Duración de 3 segundos por giro completo (ajusta para más rápido/lento)
-      .iterations(Infinity)  // Infinita
+      .duration(3000)  // Duración de 3 segundos por giro completo
+      .iterations(Infinity)
       .keyframes([
         { offset: 0, transform: 'rotate(0deg)' },     // Inicio: sin rotación
         { offset: 1, transform: 'rotate(360deg)' }    // Fin: giro completo
       ]);
-    
-    // Inicia la animación automáticamente
     this.animation.play();
   }
 

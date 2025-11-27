@@ -1,13 +1,24 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 
-  <img #persiana src="../assets/img/cortina.jpg" 
-       style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; 
-              transform: translateY(-100%); opacity: 0; z-index: 1000; object-fit: cover;" />
+  <img
+    #persiana
+    src="../assets/img/cortina.jpg"
+    style="
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      transform: translateY(-100%);
+      opacity: 0;
+      z-index: 1000;
+      object-fit: cover;
+    "
+  />
 
-  <ion-tabs [ngClass]="showTabs ? 'tabs-visible' : 'tabs-hidden'">
+  <ion-tabs>
     <ion-tab-bar slot="bottom" color="light">
-      
       <ion-tab-button (click)="navBiblioteca()" tab="biblioteca">
         <ion-icon name="library-outline"></ion-icon>
         Biblioteca

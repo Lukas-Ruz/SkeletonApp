@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RedirectCommand } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { Animation, AnimationController } from '@ionic/angular';
 
@@ -9,7 +9,7 @@ import { Animation, AnimationController } from '@ionic/angular';
   styleUrls: ['app.component.scss'],
   standalone: false,
 })
-export class AppComponent{
+export class AppComponent implements OnInit{
   
   showTabs: boolean = true;
   private animation!: Animation;
@@ -45,6 +45,7 @@ export class AppComponent{
   ngOnInit() {
     console.log('ngOnInit - Initial URL:', this.router.url);
     this.updateShowTabs(this.router.url);
+    console.log('App component initialized')
   }
 
   private updateShowTabs(url: string) {
