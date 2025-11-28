@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Lista } from '../models/lista.model';
-import { Servicio } from '../service/servicio';
+import { Servicio } from '../services/servicio';
 
 @Component({
   selector: 'app-comunidad',

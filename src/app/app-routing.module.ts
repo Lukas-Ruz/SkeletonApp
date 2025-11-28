@@ -12,6 +12,14 @@ const routes: Routes = [
   { path: 'registrar', loadChildren: () => import('./registrar/registrar.module').then(m => m.RegistrarPageModule) },
   { path: 'comunidad', loadChildren: () => import('./comunidad/comunidad.module').then(m => m.ComunidadPageModule) },
   { path: 'buscar', loadChildren: () => import('./buscar/buscar.module').then(m => m.BuscarPageModule) },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'contactos',
+    loadChildren: () => import('./contactos/contactos.module').then( m => m.ContactosPageModule)
+  },
 ];
 
 @NgModule({
